@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>grid_moma</title>
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,700&display=swap" rel="stylesheet">
+    <style type="text/css">
+        :root{
+            --t1: 2.9em;
+            --t2: 1em;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header{
+            font-family: 'Fira Sans', sans-serif;
+            font-size: 5em;
+            font-weight: bolder;
+            margin: 0.5em 9em 0.5em 0.5em;
+            display: flex;
+            justify-content: left; 
+        }
+        body{
+            font-size: 16px;
+            min-height: 100vh;
+            background: white;
+        }
+        .container{
+            display: grid;
+            /*grid-gap: 0.3em;*/
+            grid-template-columns: repeat(5, 1fr);
+            grid-auto-rows: 400px;
+            font-family: 'Fira Sans', sans-serif;
+            /*padding-top: 2em;*/
+            padding-bottom: 40em;
+        }
+        .element{
+            background: white;
+        }
+        .ele1{
+            grid-column: 2 span; 
+            background-color: #00AFD7;
+        }
+        .ele2{
+            grid-column: 3 span;
+        }
+        .ele3{
+            grid-column: 3 span;
+            
+        }
+        .ele4{
+            grid-column: 2 span;
+            background-color: #FFCD00;
+        }
+        .ele5{
+            grid-column: 2 span;
+            background-color: black;
+            color: white;
+        }
+        .ele6{
+            grid-column: 3 span;
+        }
+        .ele1, .ele4, .ele5{
+            display: flex;
+            padding: 1.5em 1.1em;
+            flex-direction: column;
+        }
+        .ele2 img, .ele3 img, .ele6 img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        h3{
+            flex-grow: 1;
+            font-size: var(--t1);
+            font-weight: bold;
+        }
+        h4{
+            font-size: var(--t2);
+        }
+    </style>
+</head>
+<body>
+   <header>GRID MoMA</header>
+    <div class="container">
+        <div class="element ele1">
+            <h3>Artista y activista político que desarrolló el concepto de arte autodestructivo y la huelga de arte . </h3>
+            <h4>Gustav Metzger</h4>
+        </div>
+        <div class="element ele2">
+            <img src="img/metzger.jpg">
+        </div>
+        <div class="element ele3">
+            <img src="img/vertov.jpg">
+        </div>
+        <div class="element ele4">
+            <h3>Director de cine vanguardista soviético, autor de obras experimentales nacido en 1896.</h3>
+            <h4>Dziga Vertov</h4>
+        </div>
+        
+        <div class="element ele5">
+            <h3>Diseñadora gráfica y artista estadounidense la cual fue la primera directora de Pentagram.</h3>
+            <h4>Paula Scher</h4>
+        </div>
+        <div class="element ele6">
+            <img src="img/scher.jpg">
+        </div>
+    </div>
+</body>
+</html>
